@@ -1,4 +1,4 @@
-import 'package:cric_score/model/information_model.dart';
+import 'package:cric_score/model/score_information_model.dart';
 import 'package:cric_score/model/match_info_model.dart';
 import 'package:cric_score/shared/strings_const.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +7,7 @@ class MatchDetailScreen extends StatefulWidget {
   const MatchDetailScreen(
       {super.key, required this.information, required this.matchInfo});
 
-  final Information? information;
+  final ScoreInformation? information;
   final MatchInfo matchInfo;
 
   @override
@@ -16,7 +16,7 @@ class MatchDetailScreen extends StatefulWidget {
 
 class _MatchDetailScreenState extends State<MatchDetailScreen> {
   MatchInfo? matchInfoLisi;
-  Information? matchInformation;
+  ScoreInformation? matchInformation;
 
   @override
   void initState(){
