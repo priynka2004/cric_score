@@ -12,10 +12,10 @@ class TeamInfo {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['shortname'] = this.shortname;
-    data['img'] = this.img;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['shortname'] = shortname;
+    data['img'] = img;
     return data;
   }
 }

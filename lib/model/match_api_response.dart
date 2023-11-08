@@ -1,11 +1,11 @@
-import 'package:cric_score/model/information_model.dart';
+import 'package:cric_score/model/score_information_model.dart';
 import 'package:cric_score/model/match_info_model.dart';
 
 class MatchApiResponse {
   String? apikey;
   List<MatchInfo>? matchInfoList;
   String? status;
-  Information? info;
+  ScoreInformation? info;
 
   MatchApiResponse({this.apikey, this. matchInfoList, this.status, this.info});
 
@@ -18,7 +18,7 @@ class MatchApiResponse {
       });
     }
     status = json['status'];
-    info = json['info'] != null ? Information.fromJson(json['info']) : null;
+    info = json['info'] != null ? ScoreInformation.fromJson(json['info']) : null;
   }
 
 
