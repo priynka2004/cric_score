@@ -1,4 +1,4 @@
-import 'package:cric_score/model/information_model.dart';
+import 'package:cric_score/model/score_information_model.dart';
 import 'package:cric_score/model/match_api_response.dart';
 import 'package:cric_score/model/match_info_model.dart';
 import 'package:cric_score/ui/match_detail_screen.dart';
@@ -10,7 +10,7 @@ MatchInfo? matchInfo;
 final routesMap={
   RoutesConst.matchDetailScreen:(context){
     return MatchDetailScreen( matchInfo: MatchInfo(),
-      information: Information());
+      information: ScoreInformation());
   }
 };
 class RoutesConst{

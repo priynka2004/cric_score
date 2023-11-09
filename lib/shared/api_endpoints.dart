@@ -1,3 +1,4 @@
-class ApiEndPoint{
-  static String baseUrl()=>'https://api.cricapi.com/v1/currentMatches?apikey=5530196f-c856-4256-9d8d-956aea57f415&offset=0';
+class ApiEndPoint {
+  static String baseUrl() =>
+      'https://api.cricapi.com/v1/currentMatches?apikey=b6df0c37-a017-4289-8f96-ffb2cd4f4cbd&offset=0';
 }

@@ -1,4 +1,4 @@
-class Information {
+class ScoreInformation {
   int? hitsToday;
   int? hitsUsed;
   int? hitsLimit;
@@ -10,7 +10,7 @@ class Information {
   int? s;
   int? cache;
 
-  Information(
+  ScoreInformation(
       {this.hitsToday,
         this.hitsUsed,
         this.hitsLimit,
@@ -22,7 +22,7 @@ class Information {
         this.s,
         this.cache});
 
-  Information.fromJson(Map<String, dynamic> json) {
+  ScoreInformation.fromJson(Map<String, dynamic> json) {
     hitsToday = json['hitsToday'];
     hitsUsed = json['hitsUsed'];
     hitsLimit = json['hitsLimit'];
