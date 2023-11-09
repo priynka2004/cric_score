@@ -3,12 +3,18 @@ import 'package:cric_score/service/match_api_service.dart';
 import 'package:flutter/foundation.dart';
 
 class MatchProvider extends ChangeNotifier{
- MatchApiResponse?  matchInfoList;
+ MatchApiResponse?  matchApiResponse;
+
+ bool isLoading = true;
 
  Future fetchMatch()async{
-  matchInfoList = await MatchApiService.getMatchInformation();
+  isLoading = true;
+  notifyListeners();
+  matchApiResponse = await MatchApiService.getMatchInformation();
   if (kDebugMode) {
-    print(matchInfoList);
+    print(matchApiResponse);
+    notifyListeners();
+    isLoading = false;
   }
   notifyListeners();
  }
