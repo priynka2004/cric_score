@@ -36,7 +36,6 @@ late MatchProvider matchProvider;
     setState(() {});
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,10 +81,8 @@ late MatchProvider matchProvider;
           );
         }
         return ListView.builder(
-          //itemCount: matchApiResponse?.matchInfoList?.length ?? 0,
           itemCount: provider.matchApiResponse?.matchInfoList?.length ?? 0,
           itemBuilder: (BuildContext context, int index) {
-            // MatchInfo matchInfo = matchApiResponse!.matchInfoList![index];
             var matchInfo = provider.matchApiResponse?.matchInfoList?[index];
             return Padding(
               padding: const EdgeInsets.all(8.0),
@@ -121,12 +118,12 @@ late MatchProvider matchProvider;
                         Row(
                           children: [
                             Image.network(
-                                matchInfo!.teamInfo![0].img.toString(),
+                                matchInfo!.teamInfo?[0].img ?? '',
                                 height: 50),
                             const SizedBox(
                               width: 10,
                             ),
-                            Text(matchInfo.teamInfo![0].shortname.toString()),
+                            Text(matchInfo.teamInfo?[0].shortname ?? ''),
                             const SizedBox(
                               width: 5,
                             ),
@@ -140,13 +137,13 @@ late MatchProvider matchProvider;
                         Row(
                           children: [
                             Image.network(
-                              matchInfo.teamInfo![1].img.toString(),
+                              matchInfo.teamInfo?[1].img ?? '',
                               height: 50,
                             ),
                             const SizedBox(
                               width: 5,
                             ),
-                            Text(matchInfo.teamInfo![1].shortname.toString()),
+                            Text(matchInfo.teamInfo?[1].shortname ?? ''),
                             const SizedBox(
                               width: 10,
                             ),
