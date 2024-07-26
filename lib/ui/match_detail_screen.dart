@@ -20,7 +20,6 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
   MatchInfo? matchInfoList;
   ScoreInformation? matchInformation;
 
-
   @override
   void initState() {
     matchInfoList = widget.matchInfo;
@@ -59,9 +58,9 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                   StringConst.text3,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
-                const Divider(),
-                const SizedBox(
-                  height: 16,
+                const Divider(
+                  thickness: 2,
+                  color: Colors.black87,
                 ),
                 SingleChildScrollView(
                   child: Padding(
@@ -75,9 +74,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
+                const Divider(),
                 Row(
                   children: [
                     const Text(StringConst.text5),
@@ -85,9 +82,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                     Text(widget.matchInfo.date.toString()),
                   ],
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
+                const Divider(),
                 Row(
                   children: [
                     const Text(StringConst.text6),
@@ -95,9 +90,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                     Text(widget.matchInfo.dateTimeGMT.toString()),
                   ],
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
+                const Divider(),
                 Row(
                   children: [
                     const Text(StringConst.text7),
@@ -105,9 +98,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                     Flexible(child: Text(widget.matchInfo.venue.toString())),
                   ],
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
+                const Divider(),
                 Column(
                   children: [
                     Row(
@@ -117,9 +108,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.hitsToday.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text9),
@@ -127,9 +116,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.queryTime.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text10),
@@ -137,9 +124,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.hitsLimit.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text11),
@@ -147,9 +132,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.cache.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text12),
@@ -157,9 +140,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.credits.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text13),
@@ -167,9 +148,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.hitsToday.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text14),
@@ -177,9 +156,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen> {
                         Text(widget.information!.server.toString()),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const Divider(),
                     Row(
                       children: [
                         const Text(StringConst.text15),

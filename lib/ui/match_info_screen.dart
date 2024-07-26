@@ -16,8 +16,7 @@ class MatchInfoScreen extends StatefulWidget {
 class _MatchInfoScreenState extends State<MatchInfoScreen> {
   late MatchApiService matchApiService;
   MatchApiResponse? matchApiResponse;
-late MatchProvider matchProvider;
-
+  late MatchProvider matchProvider;
 
   @override
   void initState() {
@@ -91,7 +90,7 @@ late MatchProvider matchProvider;
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return MatchDetailScreen(
                       matchInfo: matchInfo,
-                      information: matchApiResponse!.info,
+                      information: matchApiResponse?.info,
                     );
                   }));
                 },
@@ -105,9 +104,11 @@ late MatchProvider matchProvider;
                         // Text(matchApiResponse!.matchInfoList![0].name
                         //     .toString()),
                         //
-                        Text(provider.matchApiResponse!.matchInfoList!.first.date
+                        Text(provider
+                            .matchApiResponse!.matchInfoList!.first.date
                             .toString()),
-                        Text(provider.matchApiResponse!.matchInfoList!.first.name
+                        Text(provider
+                            .matchApiResponse!.matchInfoList!.first.name
                             .toString()),
                         const Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -117,8 +118,7 @@ late MatchProvider matchProvider;
                         ),
                         Row(
                           children: [
-                            Image.network(
-                                matchInfo!.teamInfo?[0].img ?? '',
+                            Image.network(matchInfo!.teamInfo?[0].img ?? '',
                                 height: 50),
                             const SizedBox(
                               width: 10,
@@ -147,8 +147,8 @@ late MatchProvider matchProvider;
                             const SizedBox(
                               width: 10,
                             ),
-                             // Text(
-                             //     '${matchInfo.score![1].r}-${matchInfo.score![1].w}-${matchInfo.score![1].o}'),
+                            // Text(
+                            //     '${matchInfo.score![1].r}-${matchInfo.score![1].w}-${matchInfo.score![1].o}'),
                           ],
                         ),
                         const SizedBox(
@@ -188,5 +188,3 @@ late MatchProvider matchProvider;
     );
   }
 }
-
-
